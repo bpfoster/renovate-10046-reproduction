@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^test.txt$"],
+      "matchStrings": [
+        "TRIVY_DB_IMAGE=(?<depName>.*?):(?<currentValue>.*?)@(?<currentDigest>sha256:[a-f0-9]+)\\s"
+      ],
+      "autoReplaceStringTemplate": "TRIVY_DB_IMAGE={{{depName}}}:{{{newValue}}}{{#if newDigest}}@{{newDigest}}{{/if}}\n",
+      "versioningTemplate": "docker",
+      "datasourceTemplate": "docker"
+    }
+  ]
+}
