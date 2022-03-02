@@ -1,2 +1,4 @@
 
 TRIVY_DB_IMAGE=ghcr.io/aquasecurity/trivy-db:1@sha256:cc7cd6d1d872f33e84db39f5ac38208e79b9f4155302ddbd226576a50ac1e23a
+
+
